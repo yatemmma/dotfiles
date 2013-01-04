@@ -1,0 +1,3 @@
+"beep off
+set visualbell
+
