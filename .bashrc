@@ -8,7 +8,7 @@ alias vi='vim'
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # prompt
-export PS1="\u@\W\\$ "
+export PS1="\[\e[1;33m\]\W\\[\e[00m\]\\$ "
 
 # for environment
 if [ -f ~/.bashrc_local ] ; then
