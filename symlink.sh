@@ -1,6 +1,6 @@
 #!/bin/sh
 cd $(dirname $0)
-for dotfile in .?*
+for dotfile in .?* vimfiles
 do
     if [ $dotfile != '..' ] && [ $dotfile != '.git' ]
     then
