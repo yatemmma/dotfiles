@@ -13,5 +13,9 @@
 	lp = log -p
 	la = log --color --pretty=\"format:%Cgreen%ai %Creset%h %Cred(%an): %Creset%s\"
 	tree = log --graph --date=short --pretty=format:\"%Cgreen%ai %Creset%h %Cred%cn %Creset%s\"
+	dw = diff --color-words
+	df = diff
 [color]
 	ui = auto
+[core]
+	pager = less -r
