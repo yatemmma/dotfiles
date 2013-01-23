@@ -10,10 +10,12 @@
 	ci = commit -a
 	ls = log --stat
 	lp = log -p
+	ll = log --color --pretty=\"format:%Cgreen%ai %Creset%h %Cred(%an): %Creset%s\" -40
 	la = log --color --pretty=\"format:%Cgreen%ai %Creset%h %Cred(%an): %Creset%s\"
-	tree = log --graph --date=short --pretty=format:\"%Cgreen%ai %Creset%h %Cred%cn %Creset%s\"
-	dw = diff --color-words
+	tree = log --graph --date=short --pretty=format:\"%Cgreen%ai %Creset%h %Cred%cn %Creset%s\" -20
+	treea = log --graph --date=short --pretty=format:\"%Cgreen%ai %Creset%h %Cred%cn %Creset%s\"
 	df = diff
+	dw = diff --color-words
 [color]
 	ui = auto
 [core]
