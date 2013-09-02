@@ -15,7 +15,11 @@
 	tree = log --graph --date=short --pretty=format:\"%Cgreen%ai %Creset%h %Cred%cn %Creset%s\" -20
 	treea = log --graph --date=short --pretty=format:\"%Cgreen%ai %Creset%h %Cred%cn %Creset%s\"
 	df = diff
+	dc = diff --cached
 	dw = diff --color-words
+        fe = fetch --prun
+        rh = reset --hard
+	bk = !git branch $1_bk
 [color]
 	ui = auto
 [core]

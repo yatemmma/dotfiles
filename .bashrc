@@ -8,7 +8,12 @@ alias vi='vim'
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # prompt
-export PS1="\[\e[1;33m\]\W\\[\e[00m\]\\$ "
+. /usr/local/etc/bash_completion.d/git-prompt.sh
+. /usr/local/etc/bash_completion.d/git-completion.bash
+GIT_PS1_SHOWDIRTYSTATE=true
+#export PS1="\[\e[1;33m\]\W\\[\e[00m\]\\$ "
+#export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+export PS1='\[\e[1;33m\]\W\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
 
 # only mac
 if [ `uname` = "Darwin" ]; then
