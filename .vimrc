@@ -4,6 +4,9 @@ set visualbell
 "show line number
 set number
 
+"color
+syntax on
+
 " templates
 augroup SkeletonAu
   autocmd!
