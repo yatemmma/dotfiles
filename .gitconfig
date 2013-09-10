@@ -8,6 +8,7 @@
 	ba = branch -a
 	conf = config --global
 	ci = commit -a
+        amend = commit --amend
 	ls = log --stat
 	lp = log -p
 	ll = log --color --pretty=\"format:%Cgreen%ai %Creset%h %Cred(%an): %Creset%s\" -40
@@ -17,7 +18,7 @@
 	df = diff
 	dc = diff --cached
 	dw = diff --color-words
-        fe = fetch --prun
+        fe = fetch --prune
         rh = reset --hard
 	bk = !git branch $1_bk
 [color]
