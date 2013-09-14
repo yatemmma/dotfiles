@@ -2,15 +2,16 @@
 	name = yatemmma
 	email = yatemmma@gmail.com
 [alias]
+        alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	st = status -sb
 	co = checkout
-	br = branch
+	b = branch
 	ba = branch -a
 	ci = commit -a
         amend = commit --amend
         l = log --color --pretty=\"format:%Cgreen%ai%Creset %h %Cred(%an):%Creset%C(yellow)%d%Creset %s\" -40
 	ls = log --stat -p
-	tree = log --graph --date=short --pretty=format:\"%Cgreen%ai%Creset %d %h %Cred%cn%Creset %s\" -20
+	tree = log --graph --color --pretty=\"format:%Cgreen%ai%Creset %h %Cred(%an):%Creset%C(yellow)%d%Creset %s\" -20
 	df = diff
 	dfc = diff --cached
 	dff = diff HEAD
