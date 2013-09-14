@@ -19,7 +19,14 @@
         ft = fetch --prune
         rh = reset --hard
         bk = "!sh -c 'git branch $1_bk`date \"+%Y%m%d%H%M%S\"` $1' __dummy__"
+        br = browse-remote
 [color]
 	ui = auto
 [core]
 	pager = less -r
+[browse-remote "github.com"]
+	ref = https://{host}/{path}/tree/{short_ref}
+	rev = https://{host}/{path}/commit/{commit}
+	file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
+	top = https://{host}/{path}
+	test = https://{host}/{path}
