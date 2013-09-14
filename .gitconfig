@@ -18,7 +18,7 @@
 	dfw = diff --color-words
         ft = fetch --prune
         rh = reset --hard
-	bk = !git branch $1_bk
+        bk = "!sh -c 'git branch $1_bk`date \"+%Y%m%d%H%M%S\"` $1' __dummy__"
 [color]
 	ui = auto
 [core]
