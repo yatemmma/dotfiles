@@ -24,6 +24,7 @@
 	ui = auto
 [core]
 	pager = less -r
+	quotepath = false
 [browse-remote "github.com"]
 	ref = https://{host}/{path}/tree/{short_ref}
 	rev = https://{host}/{path}/commit/{commit}
