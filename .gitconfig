@@ -18,7 +18,7 @@
 	dfw = diff --color-words
         ft = fetch --prune
         rh = reset --hard
-        bk = "!sh -c 'git branch $1_bk`date \"+%Y%m%d%H%M%S\"`$2' __dummy__"
+        bk = "!f() { git branch $1_bk`date \"+%Y%m%d%H%M%S\"`$2; }; f"
 [color]
 	ui = auto
 [core]
