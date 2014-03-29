@@ -1,6 +1,6 @@
 [user]
-	name = yatemmma
-	email = yatemmma@gmail.com
+#	name = yatemmma
+#	email = yatemmma@gmail.com
 [alias]
         alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	st = status -sb
@@ -18,18 +18,14 @@
 	dfw = diff --color-words
         ft = fetch --prune
         rh = reset --hard
-        bk = "!sh -c 'git branch $1_bk`date \"+%Y%m%d%H%M%S\"` $1' __dummy__"
-        br = browse-remote
+        bk = "!sh -c 'git branch $1_bk`date \"+%Y%m%d%H%M%S\"`$2' __dummy__"
 [color]
 	ui = auto
 [core]
 	pager = less -r
 	quotepath = false
-[browse-remote "github.com"]
-	ref = https://{host}/{path}/tree/{short_ref}
-	rev = https://{host}/{path}/commit/{commit}
-	file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
-	top = https://{host}/{path}
-	test = https://{host}/{path}
+        autocrlf = false
 [push]
 	default = current
+[include]
+        path = .gitconfig.local
