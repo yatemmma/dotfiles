@@ -19,12 +19,16 @@
         ft = fetch --prune
         rh = reset --hard
         bk = "!f() { git branch $1_bk`date \"+%Y%m%d%H%M%S\"`$2; }; f"
+        command1 = "!echo hoge fuga"
+        command2 = "!sh -c 'echo $1 $2' -"
+        command3 = "!f(){ echo $1 $2;};f"
 [color]
 	ui = auto
 [core]
 	pager = less -r
 	quotepath = false
         autocrlf = false
+        excludesfile = ~/.gitignore
 [push]
 	default = current
 [include]
