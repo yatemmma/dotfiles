@@ -1,35 +1,32 @@
 [user]
-#	name = yatemmma
-#	email = yatemmma@gmail.com
+  name = yatemmma
+  email = yatemmma@gmail.com
 [alias]
-        alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	st = status -sb
 	co = checkout
 	b = branch
 	ba = branch -a
 	ci = commit -a
-        amend = commit --amend
-        l = log --color --pretty=\"format:%Cgreen%ai%Creset %h %Cred(%an):%Creset%C(yellow)%d%Creset %s\" -40
+  amend = commit --amend
+  l = log --color --pretty=\"format:%Cgreen%ai%Creset %h %Cred(%an):%Creset%C(yellow)%d%Creset %s\" -30
 	ls = log --stat -p
 	tree = log --graph --color --pretty=\"format:%Cgreen%ai%Creset %h %Cred(%an):%Creset%C(yellow)%d%Creset %s\" -20
 	df = diff
 	dfc = diff --cached
 	dff = diff HEAD
 	dfw = diff --color-words
-        ft = fetch --prune
-        rh = reset --hard
-        bk = "!f() { git branch $1_bk`date \"+%Y%m%d%H%M%S\"`$2; }; f"
-        command1 = "!echo hoge fuga"
-        command2 = "!sh -c 'echo $1 $2' -"
-        command3 = "!f(){ echo $1 $2;};f"
+  ft = fetch --prune
+  rh = reset --hard
+  bk = "!f() { git branch $1_bk`date \"+%Y%m%d%H%M%S\"`$2; }; f"
 [color]
 	ui = auto
 [core]
 	pager = less -r
 	quotepath = false
-        autocrlf = false
-        excludesfile = ~/.gitignore
+  autocrlf = false
+  excludesfile = ~/.gitignore
 [push]
 	default = current
 [include]
-        path = .gitconfig_local
+  path = .gitconfig_local
